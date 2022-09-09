@@ -372,6 +372,20 @@ lr5:	an
 	$(BUILD) BUILDTYPE=lnp IP=$(IP6) \
 	SPECIALS="SSLINCLUDE=/usr/include/openssl SSLLIB=/usr/lib SSLCERTS=/etc/pki/tls/certs SSLKEYS=/etc/pki/tls/private GSSDIR=/usr/kerberos"
 
+# Centmin Mod EL7
+
+lcm7:	an
+	$(TOUCH) ip6
+	$(BUILD) BUILDTYPE=lnp IP=$(IP6) \
+	SPECIALS="SSLINCLUDE=/opt/el-compat/include/openssl SSLLIB=/opt/el-compat/lib SSLCERTS=/etc/pki/tls/certs SSLKEYS=/etc/pki/tls/private GSSDIR=/opt/el-compat/"
+
+# Centmin Mod EL9
+
+lcm9:	an
+	$(TOUCH) ip6
+	$(BUILD) BUILDTYPE=lnp IP=$(IP6) \
+	SPECIALS="SSLINCLUDE=/opt/el-compat/include/openssl SSLLIB=/opt/el-compat/lib SSLCERTS=/etc/pki/tls/certs SSLKEYS=/etc/pki/tls/private GSSDIR=/opt/el-compat/"
+
 lmd:	an
 	$(BUILD) BUILDTYPE=lnp IP=$(IP6) \
 	SPECIALS="SSLINCLUDE=/usr/include/openssl SSLLIB=/usr/lib SSLCERTS=/usr/lib/ssl/certs SSLKEYS=/usr/lib/ssl/private GSSINCLUDE=/usr/include GSSLIB=/usr/lib"

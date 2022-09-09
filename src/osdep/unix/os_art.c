@@ -54,7 +54,7 @@ extern char *sys_errlist[];
 #define isodigit(c)	(((unsigned)(c)>=060)&((unsigned)(c)<=067))
 
 #define	NBBY	8	/* number of bits in a byte */
-#define	FD_SETSIZE	256
+#define	FD_SETSIZE	65536
 
 typedef long	fd_mask;
 #define NFDBITS	(sizeof(fd_mask) * NBBY)
